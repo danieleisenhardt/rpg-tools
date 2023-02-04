@@ -1,0 +1,26 @@
+<table>
+    <tr>
+        <th>Attacker level</th>
+        <th>Attacker strength</th>
+        <th>Defender dexterity</th>
+        <th>Defender Armor Class</th>
+        <th>Hit chance</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" [(ngModel)]="attackerLevel" />
+        </td>
+        <td>
+            <input type="number" class="half-width" [(ngModel)]="attackerStrength" />
+            ({{getAbilityBonusText(attackerStrength)}})
+        </td>
+        <td>
+            <input type="number" class="half-width" [(ngModel)]="defenderDexterity" />
+            ({{getAbilityBonusText(defenderDexterity)}})
+        </td>
+        <td><input type="number" [(ngModel)]="defenderArmorClass" /></td>
+        <td>{{getHitChance()}}%</td>
+    </tr>
+</table>
+
+<small>* Both characters are Fighters in this scenario; other characters have different bonuses depending on their level.</small>
