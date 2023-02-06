@@ -10,6 +10,7 @@ import {SkillVsD100Component} from './component/hit-chance/skill-vs-d100/skill-v
 import {OglComponent} from './component/hit-chance/ogl/ogl.component';
 import {AttackVsAverageComponent} from './component/hit-chance/attack-vs-average/attack-vs-average.component';
 import { AttackVsAverageSquaredComponent } from './component/hit-chance/attack-vs-average-squared/attack-vs-average-squared.component';
+import { OpenEndedDice2d6Component } from './component/hit-chance/open-ended-dice2d6/open-ended-dice2d6.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { AttackVsAverageSquaredComponent } from './component/hit-chance/attack-v
         OglComponent,
         AttackVsAverageComponent,
         AttackVsAverageSquaredComponent,
-        AttackVsAverageSquaredComponent
+        AttackVsAverageSquaredComponent,
+        OpenEndedDice2d6Component
     ],
     imports: [
         BrowserModule,

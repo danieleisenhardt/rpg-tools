@@ -98,3 +98,43 @@
         <app-attack-vs-average-squared></app-attack-vs-average-squared>
     </div>
 </div>
+
+<div class="container-orange">
+    <div class="content">
+        <h2>Open-ended 2d6</h2>
+        <p>I know this system from the game Dominions 5, but I have it on good authority that it did not originate there.</p>
+        <p>
+            To roll an 'open-ended' d6: roll a six sided dice, but when you roll a six change it to a five and roll another six sided dice.
+            Theoretically you could roll an infinitely high number this way, but the chance of that is infinitely small.
+        </p>
+        <p>
+            This system simply compares the attack and defense stats of the combatants and adds 2 open-ended d6 rolls to them.
+            The attack succeeds if the attacker has a higher number than the defender.
+        </p>
+        <code class="align-left">
+            if (attack + 2d6 open ended > defense + 2d6 open ended) {{'{'}} <br />
+                // hit <br />
+            {{'}'}}
+        </code>
+        <p>
+            I like the elegance and of this system as six sided dice are readily available and easy to understand.
+            However it is developed for a game where 7 attack or defense is considered very low,
+            and 16 is only extremely high.
+            Magical equipment can increase scores significantly, but you won't get far beyond 30.
+            With numbers much higher than this a battle can become very one-sided.
+            Or you could easily have two characters that can fight each other forever without either ever hitting if
+            both put a lot of points in defense.
+        </p>
+        <p>
+            It would require other game systems like fatigue and 'harassment' penalties to mitigate these limitations.
+        </p>
+        <p>(the calculator below uses a look-up table, because chances are difficult to calculate with open-ended dice)</p>
+    </div>
+</div>
+<div class="container-white">
+    <div class="content">
+        <app-open-ended-dice2d6></app-open-ended-dice2d6>
+    </div>
+</div>
+
+<!-- TODO: Chaosium degrees of success -->
