@@ -1,0 +1,32 @@
+<table>
+    <tr>
+        <th>Skill</th>
+        <th>Level</th>
+        <th>Experience</th>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td>{{calculateLevel(strengthXP)}}</td>
+        <td><input type="number" [(ngModel)]="strengthXP" /></td>
+    </tr>
+    <tr>
+        <td>Dexterity</td>
+        <td>{{calculateLevel(dexterityXP)}}</td>
+        <td><input type="number" [(ngModel)]="dexterityXP" /></td>
+    </tr>
+    <tr>
+        <td>Agility</td>
+        <td>{{calculateLevel(agilityXP)}}</td>
+        <td><input type="number" [(ngModel)]="agilityXP" /></td>
+    </tr>
+    <tr>
+        <td>Intelligence</td>
+        <td>{{calculateLevel(intelligenceXP)}}</td>
+        <td><input type="number" [(ngModel)]="intelligenceXP" /></td>
+    </tr>
+    <tr>
+        <td>Charisma</td>
+        <td>{{calculateLevel(charismaXP)}}</td>
+        <td><input type="number" [(ngModel)]="charismaXP" /></td>
+    </tr>
+</table>
