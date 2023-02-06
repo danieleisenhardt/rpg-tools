@@ -6,7 +6,6 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./ogl.component.css']
 })
 export class OglComponent implements OnInit {
-
     attackerLevel = 1;
     attackerStrength = 10;
     defenderDexterity = 10;

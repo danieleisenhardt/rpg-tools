@@ -7,10 +7,53 @@
 
 <div class="container-orange">
     <div class="content">
+        <h2>OGL D20 System</h2>
+        <p>
+            This system was published by wizards of the coast in 2000 under the Open Game Licence.
+            It's basis is trying to roll a D20 over your target's Armor Class (AC),
+            which is a combination of the armor your target is wearing and their ability to dodge.
+        </p>
+        <p>
+            The score of the D20 roll can be augmented by character strength for melee (dexterity for ranged attacks),
+            character level (depending on character class), and many other factors such as spells, magic weapons
+            and allies assisting you in your action. If I had tried to model them all, the calculator below would
+            not fit on the page.
+        </p>
+        <p>
+            This system may be pretty OK for a pen and paper RPG where combat is not the main aspect of the game,
+            but for a combat-focussed computer game I have many objections to it:
+        </p>
+        <ul class="align-left">
+            <li>Low level characters can be killed by a single unlucky dice roll</li>
+            <li>High level characters end up swinging at each other for a long time</li>
+            <li>
+                It is a one-dimensional system, which lumps ability to dodge and armor protection into one category.
+                Forcing players to maximize both in order to get the best survivability.
+            </li>
+            <li>
+                A lot of tacked-on mechanics are required to give the player any agency beyond: <br />
+                'swing weapon at target, again'
+            </li>
+            <li>
+                Anything the player can do to improve their attack roll or armor class can be weighed against the
+                opportunity cost of making another attack. This leads to a singular optimal strategy.
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container-white">
+    <div class="content">
+        <app-ogl></app-ogl>
+    </div>
+</div>
+
+<div class="container-orange">
+    <div class="content">
         <h2>Skill v.s. D100</h2>
         <p>Inspired by the game Battle Brothers, this system has the attacker roll a D100 under their attack. The opponent's defense lowers the number they have to roll under.</p>
         <code>hit chance = skill - defense</code>
         <p>Hit chance is always at least 5% and never more than 95%</p>
+        <p>Even if a high level character has an attack skill over 100, the target's defense skill can still mitigate the hit chance below 95%. This makes this simple system scale well in my opinion.</p>
     </div>
 </div>
 <div class="container-white">
@@ -21,12 +64,37 @@
 
 <div class="container-orange">
     <div class="content">
-        <h2>OGL D20 System</h2>
-        <p>This system was published by wizards of the coast in 2000 under the Open Game Licence.</p>
+        <h2>Attack v.s. average</h2>
+        <p>I'm not sure where I got this from, but I have used it in the past.</p>
+        <code>hit chance = attack / (attack + defense) * 100</code>
+        <p>
+            This system gravitates too heavily towards a 50% hit chance in my opinion.
+            For example: any attack has a 33% chance against a defender with twice the skill.
+            This could work at low levels where a large relative differences in skill depending on player choices,
+            but at high level all opposed skills checks will be close to 50/50.
+        </p>
     </div>
 </div>
 <div class="container-white">
     <div class="content">
-        <app-ogl></app-ogl>
+        <app-attack-vs-average></app-attack-vs-average>
+    </div>
+</div>
+
+<div class="container-orange">
+    <div class="content">
+        <h2>Attack v.s. average squared</h2>
+        <p>This is another system I've tried in the past in an attempt to mitigate the downsides of the attack v.s. average system.</p>
+        <code>hit chance = attack<sup>2</sup> / (attack<sup>2</sup> + defense<sup>2</sup>) * 100</code>
+        <p>
+            It makes for better character variety at higher levels, but the problem remains: the higher the levels the smaller the difference.
+            This problem could be mitigated further by increasing the exponent, but this will make accuracy swing wildly at lower levels.
+        </p>
+        <p>Furthermore, this system makes it hard for players to understand what benefit they will get from spending their skill points on attack, defense or something else.</p>
+    </div>
+</div>
+<div class="container-white">
+    <div class="content">
+        <app-attack-vs-average-squared></app-attack-vs-average-squared>
     </div>
 </div>

@@ -7,7 +7,9 @@ import {AppComponent} from './app.component';
 import {HitChanceComponent} from './component/hit-chance/hit-chance.component';
 import {HomeComponent} from './component/home/home.component';
 import {SkillVsD100Component} from './component/hit-chance/skill-vs-d100/skill-vs-d100.component';
-import { OglComponent } from './component/hit-chance/ogl/ogl.component';
+import {OglComponent} from './component/hit-chance/ogl/ogl.component';
+import {AttackVsAverageComponent} from './component/hit-chance/attack-vs-average/attack-vs-average.component';
+import { AttackVsAverageSquaredComponent } from './component/hit-chance/attack-vs-average-squared/attack-vs-average-squared.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +17,10 @@ import { OglComponent } from './component/hit-chance/ogl/ogl.component';
         HitChanceComponent,
         HomeComponent,
         SkillVsD100Component,
-        OglComponent
+        OglComponent,
+        AttackVsAverageComponent,
+        AttackVsAverageSquaredComponent,
+        AttackVsAverageSquaredComponent
     ],
     imports: [
         BrowserModule,

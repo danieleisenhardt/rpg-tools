@@ -6,7 +6,6 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./skill-vs-d100.component.css']
 })
 export class SkillVsD100Component implements OnInit {
-
     public attackerSkill = 40;
     public defenderSkill = 0;
 
