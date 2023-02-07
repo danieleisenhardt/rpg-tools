@@ -14,6 +14,7 @@ import { OpenEndedDice2d6Component } from './component/hit-chance/open-ended-dic
 import { CharacterProgressionComponent } from './component/character-progression/character-progression.component';
 import { GradualLearnByDoingComponent } from './component/character-progression/gradual-learn-by-doing/gradual-learn-by-doing.component';
 import { FivePointsPerLevelComponent } from './component/character-progression/five-points-per-level/five-points-per-level.component';
+import { FivePointsRisingCostsComponent } from './component/character-progression/five-points-rising-costs/five-points-rising-costs.component';
 
 @NgModule({
     declarations: [
@@ -28,7 +29,8 @@ import { FivePointsPerLevelComponent } from './component/character-progression/f
         OpenEndedDice2d6Component,
         CharacterProgressionComponent,
         GradualLearnByDoingComponent,
-        FivePointsPerLevelComponent
+        FivePointsPerLevelComponent,
+        FivePointsRisingCostsComponent
     ],
     imports: [
         BrowserModule,

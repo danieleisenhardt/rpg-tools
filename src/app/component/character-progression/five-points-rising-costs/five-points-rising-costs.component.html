@@ -2,33 +2,39 @@
     <tr>
         <th>Level</th>
         <th><input type="number" readonly [(ngModel)]="level" /></th>
+        <th>Cost</th>
         <th><button (click)="levelUp()">Level Up</button></th>
         <th><button (click)="reset()">Reset</button></th>
     </tr>
     <tr>
         <td>Strength</td>
         <td><input type="number" readonly [ngModel]="stats['str']" /></td>
-        <td><button [disabled]="getFreePoints() < 1" (click)="increase('str')">+</button></td>
+        <td>{{getPrice('str')}}</td>
+        <td><button [disabled]="getFreePoints() < getPrice('str')" (click)="increase('str')">+</button></td>
     </tr>
     <tr>
         <td>Dexterity</td>
         <td><input type="number" readonly [ngModel]="stats['dex']" /></td>
-        <td><button [disabled]="getFreePoints() < 1" (click)="increase('dex')">+</button></td>
+        <td>{{getPrice('dex')}}</td>
+        <td><button [disabled]="getFreePoints() < getPrice('dex')" (click)="increase('dex')">+</button></td>
     </tr>
     <tr>
         <td>Agility</td>
         <td><input type="number" readonly [ngModel]="stats['agi']" /></td>
-        <td><button [disabled]="getFreePoints() < 1" (click)="increase('agi')">+</button></td>
+        <td>{{getPrice('agi')}}</td>
+        <td><button [disabled]="getFreePoints() < getPrice('agi')" (click)="increase('agi')">+</button></td>
     </tr>
     <tr>
         <td>Intelligence</td>
         <td><input type="number" readonly [ngModel]="stats['int']" /></td>
-        <td><button [disabled]="getFreePoints() < 1" (click)="increase('int')">+</button></td>
+        <td>{{getPrice('int')}}</td>
+        <td><button [disabled]="getFreePoints() < getPrice('int')" (click)="increase('int')">+</button></td>
     </tr>
     <tr>
         <td>Charisma</td>
         <td><input type="number" readonly [ngModel]="stats['cha']" /></td>
-        <td><button [disabled]="getFreePoints() < 1" (click)="increase('cha')">+</button></td>
+        <td>{{getPrice('cha')}}</td>
+        <td><button [disabled]="getFreePoints() < getPrice('cha')" (click)="increase('cha')">+</button></td>
     </tr>
     <tr>
         <th>Free Points</th>
