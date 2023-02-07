@@ -13,6 +13,7 @@ import { AttackVsAverageSquaredComponent } from './component/hit-chance/attack-v
 import { OpenEndedDice2d6Component } from './component/hit-chance/open-ended-dice2d6/open-ended-dice2d6.component';
 import { CharacterProgressionComponent } from './component/character-progression/character-progression.component';
 import { GradualLearnByDoingComponent } from './component/character-progression/gradual-learn-by-doing/gradual-learn-by-doing.component';
+import { FivePointsPerLevelComponent } from './component/character-progression/five-points-per-level/five-points-per-level.component';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { GradualLearnByDoingComponent } from './component/character-progression/
         AttackVsAverageSquaredComponent,
         OpenEndedDice2d6Component,
         CharacterProgressionComponent,
-        GradualLearnByDoingComponent
+        GradualLearnByDoingComponent,
+        FivePointsPerLevelComponent
     ],
     imports: [
         BrowserModule,
