@@ -15,6 +15,7 @@ import { CharacterProgressionComponent } from './component/character-progression
 import { GradualLearnByDoingComponent } from './component/character-progression/gradual-learn-by-doing/gradual-learn-by-doing.component';
 import { FivePointsPerLevelComponent } from './component/character-progression/five-points-per-level/five-points-per-level.component';
 import { FivePointsRisingCostsComponent } from './component/character-progression/five-points-rising-costs/five-points-rising-costs.component';
+import { FivePointsRestrictedComponent } from './component/character-progression/five-points-restricted/five-points-restricted.component';
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import { FivePointsRisingCostsComponent } from './component/character-progressio
         CharacterProgressionComponent,
         GradualLearnByDoingComponent,
         FivePointsPerLevelComponent,
-        FivePointsRisingCostsComponent
+        FivePointsRisingCostsComponent,
+        FivePointsRestrictedComponent
     ],
     imports: [
         BrowserModule,

@@ -22,7 +22,7 @@ export class FivePointsPerLevelComponent implements OnInit {
 
     reset() {
         this.level = 1;
-        this.stats = this.startingStats;
+        this.stats = {...this.startingStats};
     }
 
     getFreePoints() {

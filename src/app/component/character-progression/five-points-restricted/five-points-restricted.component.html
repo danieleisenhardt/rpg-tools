@@ -1,0 +1,43 @@
+<table>
+    <tr>
+        <th>Level</th>
+        <th><input type="number" readonly [(ngModel)]="level" /></th>
+        <th>Cost</th>
+        <th><button (click)="levelUp()">Level Up</button></th>
+        <th><button (click)="reset()">Reset</button></th>
+    </tr>
+    <tr>
+        <td>Strength</td>
+        <td><input type="number" readonly [ngModel]="stats['str']" /></td>
+        <td>{{getPrice('str')}}</td>
+        <td><button [disabled]="!canIncrease('str')" (click)="increase('str')">+</button></td>
+    </tr>
+    <tr>
+        <td>Dexterity</td>
+        <td><input type="number" readonly [ngModel]="stats['dex']" /></td>
+        <td>{{getPrice('dex')}}</td>
+        <td><button [disabled]="!canIncrease('dex')" (click)="increase('dex')">+</button></td>
+    </tr>
+    <tr>
+        <td>Agility</td>
+        <td><input type="number" readonly [ngModel]="stats['agi']" /></td>
+        <td>{{getPrice('agi')}}</td>
+        <td><button [disabled]="!canIncrease('agi')" (click)="increase('agi')">+</button></td>
+    </tr>
+    <tr>
+        <td>Intelligence</td>
+        <td><input type="number" readonly [ngModel]="stats['int']" /></td>
+        <td>{{getPrice('int')}}</td>
+        <td><button [disabled]="!canIncrease('int')" (click)="increase('int')">+</button></td>
+    </tr>
+    <tr>
+        <td>Charisma</td>
+        <td><input type="number" readonly [ngModel]="stats['cha']" /></td>
+        <td>{{getPrice('cha')}}</td>
+        <td><button [disabled]="!canIncrease('cha')" (click)="increase('cha')">+</button></td>
+    </tr>
+    <tr>
+        <th>Free Points</th>
+        <th><input type="number" readonly [ngModel]="getFreePoints()" /></th>
+    </tr>
+</table>

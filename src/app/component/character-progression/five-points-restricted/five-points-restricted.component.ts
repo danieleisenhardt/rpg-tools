@@ -1,12 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {stat} from 'fs';
 
 @Component({
-    selector: 'app-five-points-rising-costs',
-    templateUrl: './five-points-rising-costs.component.html',
-    styleUrls: ['./five-points-rising-costs.component.css']
+    selector: 'app-five-points-restricted',
+    templateUrl: './five-points-restricted.component.html',
+    styleUrls: ['./five-points-restricted.component.css']
 })
-export class FivePointsRisingCostsComponent implements OnInit {
+export class FivePointsRestrictedComponent implements OnInit {
     level = 1;
     startingStats = {str: 10, dex: 10, agi: 10, int: 10, cha: 10};
     stats = {...this.startingStats};
@@ -30,7 +29,6 @@ export class FivePointsRisingCostsComponent implements OnInit {
         let points = (this.level - 1) * 5;
 
 
-
         Object.values(this.stats).forEach((stat) => {
             let statpoints = stat - 10;
             let multiplier = 1;
@@ -38,7 +36,7 @@ export class FivePointsRisingCostsComponent implements OnInit {
             do {
                 points -= statpoints;
                 statpoints -= 20;
-                multiplier ++;
+                multiplier++;
             } while (statpoints > 0);
         });
 
@@ -46,7 +44,7 @@ export class FivePointsRisingCostsComponent implements OnInit {
     }
 
     increase(statKey: 'str' | 'agi' | 'dex' | 'int' | 'cha') {
-        if (this.getFreePoints() < this.getPrice(statKey)) {
+        if (!this.canIncrease(statKey)) {
             return;
         }
 
@@ -55,5 +53,17 @@ export class FivePointsRisingCostsComponent implements OnInit {
 
     getPrice(statKey: 'str' | 'agi' | 'dex' | 'int' | 'cha') {
         return Math.floor((this.stats[statKey] - 10) / 20) + 1;
+    }
+
+    canIncrease(statKey: 'str' | 'agi' | 'dex' | 'int' | 'cha') {
+        if (this.getFreePoints() < this.getPrice(statKey)) {
+            return false;
+        }
+
+        if ((this.stats[statKey]-10) / 3 >= this.level -1) {
+            return false;
+        }
+
+        return true;
     }
 }
