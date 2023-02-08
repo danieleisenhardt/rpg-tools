@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <th>Attacker skill</th>
+        <th>Defender skill</th>
+        <th>Hit chance</th>
+    </tr>
+    <tr>
+        <td><input type="number" [(ngModel)]="attackerSkill" /></td>
+        <td><input type="number" [(ngModel)]="defenderSkill" /></td>
+        <td>{{getHitChance()}}%</td>
+    </tr>
+</table>

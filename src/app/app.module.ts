@@ -9,13 +9,14 @@ import {HomeComponent} from './component/home/home.component';
 import {SkillVsD100Component} from './component/hit-chance/skill-vs-d100/skill-vs-d100.component';
 import {OglComponent} from './component/hit-chance/ogl/ogl.component';
 import {AttackVsAverageComponent} from './component/hit-chance/attack-vs-average/attack-vs-average.component';
-import { AttackVsAverageSquaredComponent } from './component/hit-chance/attack-vs-average-squared/attack-vs-average-squared.component';
-import { OpenEndedDice2d6Component } from './component/hit-chance/open-ended-dice2d6/open-ended-dice2d6.component';
-import { CharacterProgressionComponent } from './component/character-progression/character-progression.component';
-import { GradualLearnByDoingComponent } from './component/character-progression/gradual-learn-by-doing/gradual-learn-by-doing.component';
-import { FivePointsPerLevelComponent } from './component/character-progression/five-points-per-level/five-points-per-level.component';
-import { FivePointsRisingCostsComponent } from './component/character-progression/five-points-rising-costs/five-points-rising-costs.component';
-import { FivePointsRestrictedComponent } from './component/character-progression/five-points-restricted/five-points-restricted.component';
+import {AttackVsAverageSquaredComponent} from './component/hit-chance/attack-vs-average-squared/attack-vs-average-squared.component';
+import {OpenEndedDice2d6Component} from './component/hit-chance/open-ended-dice2d6/open-ended-dice2d6.component';
+import {CharacterProgressionComponent} from './component/character-progression/character-progression.component';
+import {GradualLearnByDoingComponent} from './component/character-progression/gradual-learn-by-doing/gradual-learn-by-doing.component';
+import {FivePointsPerLevelComponent} from './component/character-progression/five-points-per-level/five-points-per-level.component';
+import {FivePointsRisingCostsComponent} from './component/character-progression/five-points-rising-costs/five-points-rising-costs.component';
+import {FivePointsRestrictedComponent} from './component/character-progression/five-points-restricted/five-points-restricted.component';
+import { RandomVsRandomComponent } from './component/hit-chance/random-vs-random/random-vs-random.component';
 
 @NgModule({
     declarations: [
@@ -32,7 +33,8 @@ import { FivePointsRestrictedComponent } from './component/character-progression
         GradualLearnByDoingComponent,
         FivePointsPerLevelComponent,
         FivePointsRisingCostsComponent,
-        FivePointsRestrictedComponent
+        FivePointsRestrictedComponent,
+        RandomVsRandomComponent
     ],
     imports: [
         BrowserModule,
